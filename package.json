@@ -28,8 +28,8 @@
     "webpack-dev-server": "^4.15.1"
   },
   "dependencies": {
-    "cors": "npm i  cors",
-    "express":"npm i express",
+    "cors": "^2.8.5",
+    "express": "^4.18.2",
     "inputmask": "^5.0.8"
   }
 }
