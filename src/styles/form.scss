@@ -1,0 +1,40 @@
+.form-wrapper {
+  margin-top: var(--mt-s);
+
+  .form-title {
+    text-align: center;
+  }
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+  margin-top: var(--mt-m);
+
+  input,
+  textarea {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    resize: none;
+  }
+
+  .input-container {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    font-weight: bold;
+    font-size: .8rem;
+    margin-bottom: 10px;
+  }
+
+  .error {
+    outline: 1px solid #b02323;
+  }
+
+  .error-message {
+    color: #b02323;
+  }
+
+}

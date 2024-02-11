@@ -1,0 +1,44 @@
+@import "variables";
+@import "form";
+@import "modal";
+@import "content";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+}
+
+
+.main-wrapper {
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  max-width: 1280px;
+}
+
+.main-title {
+  font-size: 3rem;
+  margin-top: var(--mt-s);
+}
+.block-title {
+  margin-top: var(--mt-s);
+}
+
+button {
+  padding: 10px;
+  border: none;
+  background-color: #333388;
+  color: white;
+  cursor: pointer;
+}
+
+
+
+
