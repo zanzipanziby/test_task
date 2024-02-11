@@ -34,9 +34,15 @@ body {
 button {
   padding: 10px;
   border: none;
-  background-color: #333388;
+  background-color: #3f3fab;
   color: white;
   cursor: pointer;
+  &:hover {
+    background-color: #232375;
+  }
+  &:active{
+    background-color: #333388;
+  }
 }
 
 
