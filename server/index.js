@@ -15,7 +15,7 @@ app.post("/api/registration", (req, res) => {
         "status": "error",
         "fields": {
           "email": "This email address is already registered",
-          "phone": "This email address is already registered"
+          "phone": "This phone address is already registered"
         }
       });
     }, Math.random() * 1000);

@@ -5,7 +5,7 @@ module.exports = {
   entry: "./src/index.js",
   output: {
     path: path.resolve(__dirname, "public"),
-    filename: "index.js",
+    filename: "index.js"
   },
   module: {
     rules: [
@@ -15,26 +15,30 @@ module.exports = {
         use: {
           loader: "babel-loader",
           options: {
-            presets: ["@babel/preset-env"],
-          },
-        },
+            presets: ["@babel/preset-env"]
+          }
+        }
       },
       {
         test: /\.scss$/,
-        use: ["style-loader", "css-loader", "sass-loader"],
+        use: ["style-loader", "css-loader", "sass-loader"]
       },
-    ],
+      {
+        test: /\.css$/,
+        use: ["style-loader", "css-loader"]
+      }
+    ]
   },
   plugins: [
     new HtmlWebpackPlugin({
-      template: "./src/index.html",
-    }),
+      template: "./src/index.html"
+    })
   ],
   devServer: {
     static: {
-      directory: path.join(__dirname, "dist"),
+      directory: path.join(__dirname, "dist")
     },
     compress: true,
-    port: 9000,
-  },
+    port: 9000
+  }
 };

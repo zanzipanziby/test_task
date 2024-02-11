@@ -1,9 +1,10 @@
+import "toastify-js/src/toastify.css"
 import { showErrorMessage, validateForm } from "./modules/form/form-validation";
 import { submitForm } from "./modules/form/form-submition";
+import { toast } from "./utils/toast";
+
+
 const form = document.getElementById("contact-form");
-
-
-
 form.addEventListener("submit", async (event) => {
   console.log("Form submit handler called");
   event.preventDefault()
@@ -16,13 +17,14 @@ form.addEventListener("submit", async (event) => {
       const response = await submitForm(data)
       if (response.status === "success") {
         form.reset();
-        displaySuccessMessage(response.message);
+        toast.success(response.message)
       } else if (response.status === "error") {
         displayErrorMessages(response.fields);
+        toast.error('Failed to register')
       }
     } catch (error){
       console.error("Error:", error);
-      displayErrorMessage("An error occurred during form submission.");
+      toast.error("An error occurred during form submission")
     }
   }
 });
@@ -34,18 +36,4 @@ function displayErrorMessages(fields) {
   });
 }
 
-function displaySuccessMessage(message) {
-  const successMessage = document.createElement("div");
-  successMessage.classList.add("success-message");
-  successMessage.textContent = message;
 
-  form.appendChild(successMessage);
-}
-
-function displayErrorMessage(message) {
-  const errorMessage = document.createElement("div");
-  errorMessage.classList.add("error-message");
-  errorMessage.textContent = message;
-
-  form.appendChild(errorMessage);
-}
