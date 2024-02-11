@@ -2,6 +2,7 @@
 @import "form";
 @import "modal";
 @import "content";
+@import "progress-bar";
 
 * {
   margin: 0;
@@ -16,6 +17,7 @@ body {
 
 .main-wrapper {
   margin: 0 auto;
+  padding: 20px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -34,14 +36,14 @@ body {
 button {
   padding: 10px;
   border: none;
-  background-color: #3f3fab;
+  background-color: var(--color-main);
   color: white;
   cursor: pointer;
   &:hover {
-    background-color: #232375;
+    background-color: var(--color-secondary);
   }
   &:active{
-    background-color: #333388;
+    background-color: var(--color-main);
   }
 }
 

@@ -9,6 +9,7 @@
 .form {
   display: flex;
   flex-direction: column;
+  gap: 5px;
   width: 300px;
   margin-top: var(--mt-m);
 
@@ -23,7 +24,6 @@
   .input-container {
     display: flex;
     flex-direction: column;
-    gap: 5px;
     font-weight: bold;
     font-size: .8rem;
     margin-bottom: 10px;
@@ -36,5 +36,6 @@
   .error-message {
     color: #b02323;
   }
+
 
 }
