@@ -2,7 +2,8 @@
 /node_modules/
 
 # Webpack output
-/dist/
+/public/
+
 
 #Prettier
 .prettierrc
