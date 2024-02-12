@@ -1,5 +1,7 @@
 const HtmlWebpackPlugin = require("html-webpack-plugin");
+const webpack = require("webpack");
 const path = require("path");
+
 
 module.exports = {
   entry: "./src/index.js",
@@ -23,13 +25,16 @@ module.exports = {
         test: /\.(scss|css)$/,
         use: ["style-loader", "css-loader", "sass-loader"]
       },
-
     ]
   },
   plugins: [
     new HtmlWebpackPlugin({
       template: "./src/index.html"
-    })
+    }),
+
+    new webpack.DefinePlugin({
+      'process.env.API_BASE_URL': JSON.stringify(process.env.API_BASE_URL || 'http://localhost:9090'),
+    }),
   ],
   devServer: {
     static: {

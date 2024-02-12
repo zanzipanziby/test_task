@@ -2,7 +2,7 @@ import { hideProgressBar, showProgressBar } from "../../utils/progress-bar";
 import { showErrorMessage, validateForm } from "./form-validation";
 import { toast } from "../../utils/toast";
 
-//const baseUrl = "http://localhost:9090";
+const baseUrl = process.env.API_BASE_URL;
 
 export const submitForm = async (formData) => {
   return (await fetch(`/api/registration`, {
