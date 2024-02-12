@@ -41,3 +41,4 @@ webpack.config.*.js
 
 # Ignore files containing secrets or confidential information
 secrets.*
+.vercel
